@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER skydjol@gmail.com
-RUN apt-get install wget -y && wget http://archive.cloudera.com/cdh5/one-click-install/precise/amd64/cdh5-repository_1.0_all.deb \
+RUN apt-get install apt-transport-https wget -y && wget http://archive.cloudera.com/cdh5/one-click-install/precise/amd64/cdh5-repository_1.0_all.deb \
 && dpkg -i /cdh5-repository_1.0_all.deb \
 && apt-get update \
 && apt-get install -y  python-software-properties \
