@@ -10,4 +10,4 @@ RUN apt-get install wget -y && wget http://archive.cloudera.com/cdh5/one-click-i
 
 RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y
 
-EXPOSE 9000 50010 50020 50070 50075 21000 21050 25000 25010 25020
+EXPOSE 21000 21050 25000 25010 25020
