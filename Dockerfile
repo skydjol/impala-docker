@@ -5,7 +5,7 @@ RUN apt-get install apt-transport-https wget -y && wget http://archive.cloudera.
 && apt-get update \
 && apt-get install -y  software-properties-common \
 && add-apt-repository ppa:webupd8team/java -y \
-&& echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+&& echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections \
 && apt-get install -y oracle-java7-installer vim
 
 RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y
