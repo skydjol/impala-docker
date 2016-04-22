@@ -11,4 +11,7 @@ RUN apt-get install apt-transport-https wget -y && wget http://archive.cloudera.
 
 RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y
 
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 EXPOSE 21000 21050 25000 25010 25020
