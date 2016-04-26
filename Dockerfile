@@ -9,9 +9,8 @@ RUN apt-get install apt-transport-https wget -y && wget http://archive.cloudera.
 && echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections \
 && apt-get install -y oracle-java7-installer vim
 
-RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y
-
-RUN apt-get clean
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y \
+&& apt-get clean \
+&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 21000 21050 25000 25010 25020
